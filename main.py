@@ -1,4 +1,6 @@
-from fastapi import FastAPI, HTTPException
+# RAZA: This file should look empty only add the routes here and create the app.
+# read about mvc pattern i expect every route to be super simple and cll a controller or serivce that will do the real job 
+from fastapi import FastAPI, HTTPException 
 
 from models import AmountUpdate, Product, ProductCreate
 from storage import storage
@@ -28,13 +30,13 @@ def create_product(product: ProductCreate):
     return storage.add(product)
 
 
-@app.patch("/products/{product_id}/amount", response_model=Product)
+@app.patch("/products/{product_id}/amount", response_model=Product) # why patch and not put lets disscus on this super important to know :)
 def update_product_amount(product_id: int, update: AmountUpdate):
     get_product_or_404(product_id)
     return storage.update_amount(product_id, update.amount)
 
 
-@app.delete("/products/{product_id}", status_code=204)
+@app.delete("/products/{product_id}", status_code=204) # I dont like magic numbers there is a packages that get this number as const thik some developers dont know what is 204? same for all
 def delete_product(product_id: int):
     get_product_or_404(product_id)
     storage.delete(product_id)
