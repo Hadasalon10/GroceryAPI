@@ -1,3 +1,4 @@
+// main.py
 from fastapi import FastAPI, HTTPException
 
 from models import AmountUpdate, Product, ProductCreate
