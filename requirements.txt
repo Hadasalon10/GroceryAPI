@@ -1,2 +1,2 @@
-fastapi
+fastapi # use uv insted of requiremnt.txt read about it and install it and add it to this progect
 uvicorn[standard]

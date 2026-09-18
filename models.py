@@ -1,3 +1,5 @@
+
+# sepreate this file there is real models of product and there is a model for api stuff
 from pydantic import BaseModel, Field
 
 
