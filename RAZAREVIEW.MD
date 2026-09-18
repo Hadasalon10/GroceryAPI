@@ -1,3 +1,0 @@
-I expoect this task to be like a super senior engnire wirte it we dont want code that is only work. we want code that will help us build fast in the future.
-cleancode,cleancode,cleancode! - use good varaibles name, function should describe want it did from the nameing of it, eveting should be configurable, error handling, logs, use pydatic models, oop if needed! seprate into function and files.
-create a folder structure for ur code evertimg sholed not be im the root dir.
